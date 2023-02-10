@@ -9,8 +9,8 @@
 // Задать переменную (let во многом схож с var, но в var есть отличия, которые делают его(var) не желательным)
 // let a = 5
 // Задать постоянную
-const skill = document.getElementById('skill')
-const isLove = document.getElementById('isLove')
+// const skill = document.getElementById('skill')
+// const isLove = document.getElementById('isLove')
 const string = document.getElementById('string')
 
 // Вывод элемента в консоль
@@ -22,11 +22,11 @@ const string = document.getElementById('string')
 // console.log(span.innerText)
 
 // const skillText = prompt('Какой язык Вы учите?', 'ХЗ!')
-// const isLoveValue = confirm('Любите ли Вы этот язык???')
+// const isLoveValue = confirm('Любите ли Вы этот язык???', "Да", "Нет")
 
 // console.log(isLoveValue)
 // console.log(document.getElementById('example').innerHTML) 
 
 // skill.innerText = skillText
 // isLove.innerText = isLoveValue
-
+console.log(string.innerText)
