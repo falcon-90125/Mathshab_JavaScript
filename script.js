@@ -11,7 +11,7 @@
 // Задать постоянную
 // const skill = document.getElementById('skill')
 // const isLove = document.getElementById('isLove')
-const string = document.getElementById('string')
+// const string = document.getElementById('string')
 
 // Вывод элемента в консоль
 // console.log(span)
@@ -29,4 +29,19 @@ const string = document.getElementById('string')
 
 // skill.innerText = skillText
 // isLove.innerText = isLoveValue
-console.log(string.innerText)
+// console.log(string.innerText)
+
+// STRING
+const str1 = 'Greeting'
+const str2 = "Text"
+const str3 = `Revers`
+
+// Обратный слеш для дублирующих кавычек
+// const str_1 = 'I\'m OK'
+// const str_2 = "Саша сказал: \"Привет\""
+// typeof - посмотреть тип переменной
+// console.log(str1, typeof str1)
+
+console.log(str1)
+console.log(str2)
+console.log(str3)
