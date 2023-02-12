@@ -11,7 +11,6 @@
 // Задать постоянную
 // const skill = document.getElementById('skill')
 // const isLove = document.getElementById('isLove')
-// const string = document.getElementById('string')
 
 // Вывод элемента в консоль
 // console.log(span)
@@ -29,7 +28,7 @@
 
 // skill.innerText = skillText
 // isLove.innerText = isLoveValue
-// console.log(string.innerText)
+// console.log(skillText.innerText)
 
 // STRING
 const str1 = 'Greeting'
@@ -37,11 +36,98 @@ const str2 = "Text"
 const str3 = `Revers`
 
 // Обратный слеш для дублирующих кавычек
-// const str_1 = 'I\'m OK'
-// const str_2 = "Саша сказал: \"Привет\""
+const str_1 = 'I\'m OK'
+const str_2 = "Саша сказал: \"Привет\""
+
+// При использовании обратных кавычек, проблемы с кавычками внутри нет
+const str_3 = `I'm say "Hello"`
+// Но основная причина применения обратных кавычек - возможность встраивания переменных в строки
+const str_3_1 = `I'm say ${str_1}`
+// Так же обратные кавычки поддерживают перенос строки
+const str_3_2 = `I'm
+ say ${str_1}`
+// Синтаксис разрыва строки при одинарных и двойных кавычках
+const str_3_3 = `I'm say\n"Hello"`
+
 // typeof - посмотреть тип переменной
 // console.log(str1, typeof str1)
 
 console.log(str1)
 console.log(str2)
 console.log(str3)
+console.log(str_3_1)
+console.log(str_3_2)
+console.log(str_3_3)
+
+//NUMBER - от -(2**53 -1) до +(2**53 -1)
+console.log(999999999999999999)
+// > 1000000000000000000
+const num1 = 79*3
+// alert(num1)
+// Если в матеметическом выражении стоит строка с числом (например так - "5"), то строка преобразуется в число - КРОМЕ СЛОЖЕНИЯ "+"
+const num2 = 79* " 3   "
+console.log(num2)
+const num3 = 79+"3"
+console.log(num3)
+// Здесь сначала идёт сложение первых двух чисел, затем сумма склеиватеся в 3-кой
+const num4 = 7 + 9 +"3"
+console.log(num4)
+
+const rem = 8 * 'a'
+// > NaN - Not a Number
+console.log(rem)
+
+//Бесконечность - Infinity - такой результат тоже может быть
+const inf = 17/0
+console.log(inf)
+
+// BIGINT - большое целое число
+const bigint = 103123123123459780542730457n
+console.log(bigint)
+
+//BOOLEAN
+//true / false
+// > < >= <= >== <== == ===
+const bool_1 = 10 > 5
+console.log(bool_1)
+// > true
+
+const bool_2 = 'a' > 'AAAA'
+console.log(bool_2)
+// > true - т.к. 'a'= 61, 'A' = 41   см.https://www.utf8-chartable.de/
+
+// NULL
+let empty = null
+console.log(empty, typeof empty)
+
+// UNDEFINED 
+let box = undefined
+// аналогично - без присваивания. т.е. перменная объявлен, но в неё ни чего не поместили
+// let box
+console.log(box, typeof box)
+
+//SYMBOL создаются для того, чтобы быть уникальным свойством, даже если в разные SYMBOL'ы
+//записно одно и тоже, они не будут равны
+const unic = Symbol('id')
+const unic2 = Symbol('id')
+console.log(unic)
+console.log(unic2)
+console.log(unic == unic2) // >false
+
+//OBJECT
+const obj = {
+    name: 'Sasha',
+    age: 19,
+    isHappy: true
+}
+
+console.log(obj.name)
+console.log(obj['name']) //аналогичный способ
+
+obj.job = 'Google'
+console.log(obj)
+
+const array = ['Аня', 18, false]
+array[3] = 'Facebook'
+console.log(array)
+console.log(array[0])
