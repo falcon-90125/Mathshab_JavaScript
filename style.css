@@ -30,13 +30,14 @@ nav > a { /*обращаемся ко всем тегам 'a'*/
 
 .about_us {
     display: flex; /*flex выстраивает элементы в строку*/
-    flex-direction: row-reverse;
+    /* flex-direction: row-reverse; */
+    justify-content: center;
 }
 
-
-
-
-
+/* https://youtu.be/99usWMRtjlo?t=4675 */
+.about_us img {
+    width: 300px;
+}
 
 
 
