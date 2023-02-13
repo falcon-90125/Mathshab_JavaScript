@@ -11,7 +11,6 @@
 // Задать постоянную
 // const skill = document.getElementById('skill')
 // const isLove = document.getElementById('isLove')
-const string = document.getElementById('string')
 
 // Вывод элемента в консоль
 // console.log(span)
