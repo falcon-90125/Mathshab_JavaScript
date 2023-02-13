@@ -11,7 +11,7 @@
 // Задать постоянную
 // const skill = document.getElementById('skill')
 // const isLove = document.getElementById('isLove')
-const string = document.getElementById('string')
+// const string = document.getElementById('string')
 
 // Вывод элемента в консоль
 // console.log(span)
@@ -29,4 +29,4 @@ const string = document.getElementById('string')
 
 // skill.innerText = skillText
 // isLove.innerText = isLoveValue
-console.log(string.innerText)
+// console.log(string.innerText)
