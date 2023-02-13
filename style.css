@@ -1,7 +1,54 @@
+
+/* Чистим отступы у всех элементов, которые стоят по умолчанию */
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+header {
+    background-color: lightgray;
+    height: 50px;
+}
+
+nav {
+    /* border: 3px dotted black; */
+    /* width: 50%; 30px; max-content; min-content */
+    height: inherit; /* 50px */
+    display: flex; /* позиционирования с помощью flex-боксов*/
+    /* justify-content: space-evenly; распределение в пространстве space-around; space-between */
+    justify-content: start;
+    align-items: center;
+}
+
+nav > a { /*обращаемся ко всем тегам 'a'*/
+    text-decoration: none; /*обнуляем всю декорацию*/
+    color:black;
+    font-size: 20px;
+    padding: 0 30px;
+}
+
+.about_us {
+    display: flex; /*flex выстраивает элементы в строку*/
+    /* flex-direction: row-reverse; */
+    justify-content: center;
+}
+
+/* https://youtu.be/99usWMRtjlo?t=4675 */
+.about_us img {
+    width: 300px;
+}
+
+
+
+
+
+
+
 img{
-    width: 700px; 
+    width: 200px; 
     /* задать расстояния по порядку сторон по часовой стрелке, начиная сверху */
-    margin: 10px 100px 10px 400px;
+    margin: 10px 100px 10px 550px;
 
 }
 span{
