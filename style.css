@@ -32,6 +32,7 @@ nav > a { /*обращаемся ко всем тегам 'a'*/
     display: flex; /*flex выстраивает элементы в строку*/
     /* flex-direction: row-reverse; */
     justify-content: center;
+    
 }
 
 /* https://youtu.be/99usWMRtjlo?t=4675 */
