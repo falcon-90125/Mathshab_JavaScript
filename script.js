@@ -259,10 +259,35 @@
 //     console.log(i++)
 // } while (i <= counts)
 
-//FOR
-//https://youtu.be/KHLFTTA4KFc?t=2797
-const arr = []
-for (let i = 1; i <=50; ++i) {
-    arr.push(i) //push добавляет элемент в конец массива
+// //FOR
+// //https://youtu.be/KHLFTTA4KFc?t=2797
+// const arr = []
+// for (let i = 1; i <=50; ++i) {
+//     arr.push(i) //push добавляет элемент в конец массива
+// }
+// // console.log(arr)
+
+// // % - остаток от деления
+// //Данный цикл for с синтаксисом of работате намного быстрее чем объект
+// // https://youtu.be/KHLFTTA4KFc?t=3495
+// const newArr = []
+
+// for (elem of arr) {
+//     const marker = elem % 3
+//     if (!marker) {
+//         newArr.push(elem)
+//     }
+// }
+// console.log(newArr)
+
+//Цикл для объектов
+//https://youtu.be/KHLFTTA4KFc?t=3791
+const obj = {
+    name: 'Sasha',
+    age: 20,
+    sity: 'Voronej'
 }
-console.log(arr)
+
+for (key in obj) {
+    console.log(key, obj[key])
+}
