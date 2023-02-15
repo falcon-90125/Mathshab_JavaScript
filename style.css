@@ -40,8 +40,13 @@ nav > a { /*обращаемся ко всем тегам 'a'*/
     width: 300px;
 }
 
-
-
+/* https://youtu.be/KHLFTTA4KFc?t=4704 */
+.my_game{
+    display: flex;
+    flex-direction: column;
+    max-width: 300px;
+    margin: 0 auto;
+}
 
 
 

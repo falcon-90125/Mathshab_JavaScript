@@ -280,14 +280,31 @@
 // }
 // console.log(newArr)
 
-//Цикл для объектов
-//https://youtu.be/KHLFTTA4KFc?t=3791
-const obj = {
-    name: 'Sasha',
-    age: 20,
-    sity: 'Voronej'
+// //Цикл для объектов
+// //https://youtu.be/KHLFTTA4KFc?t=3791
+// const obj = {
+//     name: 'Sasha',
+//     age: 20,
+//     sity: 'Voronej'
+// }
+
+// for (key in obj) {
+//     console.log(key, obj[key])
+// }
+
+// Скрипт для Play game
+// https://youtu.be/KHLFTTA4KFc?t=4794
+const randomValue1 = (Math.random() * 100).toFixed(0)
+const randomValue2 = (Math.random() * 100).toFixed(0)
+
+const isPlus = Math.random() > 0.5
+
+const gameElements = document.getElementById('my_game').children
+
+if(isPlus) {
+    gameElements[1].innerText = `${randomValue1} + ${randomValue2}`
+} else {
+    gameElements[1].innerText = `${randomValue1} - ${randomValue2}`
 }
 
-for (key in obj) {
-    console.log(key, obj[key])
-}
+console.log(gameElements)
