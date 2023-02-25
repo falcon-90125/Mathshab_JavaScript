@@ -292,6 +292,94 @@
 //     console.log(key, obj[key])
 // }
 
+//FUNCTION
+// https://youtu.be/A-5mX6OrXXc?t=464
+
+//1 метод: declaration
+//https://youtu.be/A-5mX6OrXXc?t=1101 - этим методом функцию можно вызывать до её объявления
+function screem(a, b) {
+    // alert("AAAAAAAAA")
+    // return 'I am OK'
+    // const result = a*b
+    // return result
+    //или в одну строку
+    return a*b
+}
+// screem()
+// console.log(screem(15, 10))
+
+//2 метод: expession - создаётся аналогично переменным
+// экспрешн нельзя юзать до объявления, ​они не подвержены хоистингу
+const wowScreem = function() {
+    alert('WOOOOOOW')
+}
+// wowScreem()
+
+//3 метод: arrow - стрелочные функции - очень похожи на expession, но синтаксис приятнее - наиболее частый метод объявления функции
+const arrow = () => {
+    alert('arrow is in the sky')
+}
+// arrow()
+
+//Рефакторинг - улучшение кода
+//https://youtu.be/A-5mX6OrXXc?t=1142
+//ИГРА
+//Нажав на кнопку - игра запускается, генерируется задача,
+//пользователь может ввести ответ, должна появится кнопка проверить
+
+//Нажав кнопку проверить, мы сравниваем ввод пользователья с правильным ответом
+//Вывести результат и правильное значение, сменить кнопку на "Начать заново"
+
+// Получем случайные значения функцией
+// https://youtu.be/A-5mX6OrXXc?t=2016
+const getRandomNumInRange = (min, max) => {
+    const randomNum = (Math.random() * (max - min) + min).toFixed(0)
+    return randomNum
+}
+// console.log(getRandomNumInRange(3,1200))
+
+//Задача со случайными числами
+// https://youtu.be/A-5mX6OrXXc?t=2501 - 1я версия
+const getTask0 = () => {
+    const randomNum1 = getRandomNumInRange(0, 100)
+    const randomNum2 = getRandomNumInRange(0, 100)
+
+    let simbol
+    if (Math.random() > 0.5) {
+        simbol = "+"
+    } else {
+        simbol = "-"
+    }
+
+    const task = `${randomNum1} ${simbol} ${randomNum2}`
+    return task
+}
+
+// console.log(getTask0())
+
+// https://youtu.be/A-5mX6OrXXc?t=2740 - после рефакторинга
+const getTask = () => {
+    // const randomNum1 = getRandomNumInRange(0, 100)
+    // const randomNum2 = getRandomNumInRange(0, 100)
+
+    // let simbol
+    // if (Math.random() > 0.5) {
+    //     simbol = "+"
+    // } else {
+    //     simbol = "-"
+    // }
+    // Унарный оператор
+    // https://youtu.be/A-5mX6OrXXc?t=2740
+    const simbol = (Math.random() > 0.5) ? "+" : "-"
+    const task = `${getRandomNumInRange(0, 100)} ${simbol} ${getRandomNumInRange(0, 100)}`
+    //Ответ задачи с помощью функции "eval" https://youtu.be/A-5mX6OrXXc?t=2928
+    gameState.rigthAnswer = eval(task)
+    return task
+}
+
+
+
+
 // Скрипт для Play game
 // https://youtu.be/KHLFTTA4KFc?t=4794
 const randomValue1 = (Math.random() * 100).toFixed(0)
@@ -300,11 +388,48 @@ const randomValue2 = (Math.random() * 100).toFixed(0)
 const isPlus = Math.random() > 0.5
 
 const gameElements = document.getElementById('my_game').children
+// https://youtu.be/A-5mX6OrXXc?t=1482
+// console.log(gameElements)
+const title = gameElements[0]
+const userTask = gameElements[1]
+const userAnswer = gameElements[2]
+const btnGame = gameElements[3]
 
-if(isPlus) {
-    gameElements[1].innerText = `${randomValue1} + ${randomValue2}`
-} else {
-    gameElements[1].innerText = `${randomValue1} - ${randomValue2}`
+//Состояния
+//https://youtu.be/A-5mX6OrXXc?t=1692
+const gameState = {
+    taskInProcess: false,
+    rigthAnswer: null
 }
 
-console.log(gameElements)
+// https://youtu.be/A-5mX6OrXXc?t=1632
+//метод onclick
+// https://youtu.be/A-5mX6OrXXc?t=1900
+btnGame.onclick = () => {
+    // console.log('click')
+    if (!gameState.taskInProcess) {
+        // генерируем задачу и ответ
+        // const task = getTask()
+        // показываю задачу пользователю
+        // https://youtu.be/A-5mX6OrXXc?t=3112
+        userTask.innerText = getTask()
+        // Сделать input видимым https://youtu.be/A-5mX6OrXXc?t=3180
+        userAnswer.hidden = false
+        // меняю кнопку
+        btnGame.innerText = "Проверить!"
+        // меняю состояние
+        gameState.taskInProcess = true
+    } else {
+        // Проверка задачи: сравнить ответ пользователя с правильным
+        // https://youtu.be/A-5mX6OrXXc?t=3323
+        // вывести результат
+        // вывести поздравление
+        // поменять кнопку и состояние
+    }
+}
+
+// if(isPlus) {
+//     gameElements[1].innerText = `${randomValue1} + ${randomValue2}`
+// } else {
+//     gameElements[1].innerText = `${randomValue1} - ${randomValue2}`
+// }
