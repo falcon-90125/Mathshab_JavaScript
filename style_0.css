@@ -1,0 +1,32 @@
+/*код на начальных занятиях*/
+img{
+    width: 200px; 
+    /* задать расстояния по порядку сторон по часовой стрелке, начиная сверху */
+    margin: 10px 100px 10px 550px;
+
+}
+span{
+    font-size: 15px;
+}
+.name {
+    color: red;
+}
+#skill {
+    color: green;
+}
+h1 {
+    /* рамка вокруг "Анкета" */
+    /* border: 3px solid gray; */
+    /* отступ внутри рамки */
+    padding: 0px;
+    /* отступы с внешней строны рамки */
+    margin: 30px;
+    /* выравнивание текста */
+    text-align: center;
+    /* высота линий */
+    /* https://youtu.be/_p4YM2VykZg?t=4477 */
+    /* line-height: 40px; */
+}
+h2 {
+    text-align: center;
+}
