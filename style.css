@@ -1,5 +1,3 @@
-/* Про импорт шрифтов */
-/* https://youtu.be/A-5mX6OrXXc?t=4656 */
 @import url('https://fonts.googleapis.com/css2?family=Comfortaa:wght@300;400;500;600;700&display=swap');
 
 
@@ -17,39 +15,32 @@ header {
 }
 
 nav {
-    /* border: 3px dotted black; */
-    /* width: 50%; 30px; max-content; min-content */
     height: inherit; /* 50px */
     display: flex; /* позиционирования с помощью flex-боксов*/
-    /* justify-content: space-evenly; распределение в пространстве space-around; space-between */
     justify-content: start;
     align-items: center;
 }
 
-nav > a { /*обращаемся ко всем тегам 'a'*/
-    text-decoration: none; /*обнуляем всю декорацию*/
+nav > a {
+    text-decoration: none;
     color:black;
     font-size: 20px;
     padding: 0 30px;
 }
 
 .about_us {
-    display: flex; /*flex выстраивает элементы в строку*/
-    /* flex-direction: row-reverse; */
+    display: flex;
     justify-content: center;
     
 }
 
-/* https://youtu.be/99usWMRtjlo?t=4675 */
-/* https://youtu.be/A-5mX6OrXXc?t=4850 */
 .about_us img {
     width: 300px;
     height: 300px;
     object-fit: cover;
     object-position: top;
 }
-
-/* https://youtu.be/A-5mX6OrXXc?t=4486 */
+x
 .about_us-discription {
     display: flex;
     flex-direction: column;
@@ -59,8 +50,6 @@ nav > a { /*обращаемся ко всем тегам 'a'*/
     padding: 5px;
 }
 
-/* https://youtu.be/KHLFTTA4KFc?t=4704 */
-/* https://youtu.be/A-5mX6OrXXc?t=4946 */
 .my_game{
     display: flex;
     flex-direction: column;
@@ -94,8 +83,6 @@ nav > a { /*обращаемся ко всем тегам 'a'*/
     align-items: center;
 }
 
-/* https://youtu.be/hTlQd-gme8M?t=1143 */
-/* Блок выбора элементов */
 .choosed_block{
     display: flex;
     flex-direction: column;
@@ -117,4 +104,21 @@ nav > a { /*обращаемся ко всем тегам 'a'*/
     justify-content: center;
     align-items: center;
     background-color: darksalmon;
+}
+.choosed_element {
+    border: 3px solid black;
+}
+
+.posts_block {
+    max-width: 600px;
+    margin: 20px auto;
+}
+.posts_block h2 {
+    text-align: center;
+}
+.posts_block-container > * {
+    margin: 5px;
+    padding: 10px;
+    border-radius: 10px;
+    background-color: lightgray;
 }
