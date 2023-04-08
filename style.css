@@ -12,10 +12,17 @@
 header {
     background-color: lightgray;
     height: 50px;
+    /* Фиксация шапки - панели с кнопками */
+    /* https://youtu.be/kZ-xLBjQTJM?t=4645 */
+    width: 100%;
+    position: fixed;
+    top: 0;
 }
 
 nav {
     height: inherit; /* 50px */
+    /* https://youtu.be/kZ-xLBjQTJM?t=4806 */
+    width: inherit;
     display: flex; /* позиционирования с помощью flex-боксов*/
     justify-content: start;
     align-items: center;
@@ -26,6 +33,16 @@ nav > a {
     color:black;
     font-size: 20px;
     padding: 0 30px;
+}
+
+/* Подсветка текста на кнопках */
+/* https://youtu.be/kZ-xLBjQTJM?t=4959 */
+nav > a:hover {
+    color: blue;
+}
+
+main {
+    margin-top: 50px;
 }
 
 .about_us {

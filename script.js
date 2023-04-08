@@ -124,4 +124,7 @@ function getPost() {
     .catch(err => console.log(err.message))
 }
 
-showPostBTN.onclick = getPost
+// showPostBTN.onclick = () => {getPost()}
+// https://youtu.be/kZ-xLBjQTJM?t=4576
+
+getPost()
